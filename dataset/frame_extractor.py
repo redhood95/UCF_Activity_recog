@@ -1,3 +1,6 @@
+# this frame extractor sucks 3.16 gb to 124 gb 
+
+
 import os 
 import cv2 
 
