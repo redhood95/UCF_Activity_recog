@@ -7,6 +7,7 @@ import numpy as np
 import scipy.misc
 from tqdm import tqdm
 
+# extracts features from videos 
 
 def crop_center(im):
     """
@@ -147,4 +148,4 @@ list1 =  os.listdir(path)
 
 for i in list1:
     os.mkdir(os.path.join(extracted,i))
-    extract_features(input_dir=os.path.join(path,i), output_dir=os.path.join(extracted,i), batch_size=32)
+    extract_features(input_dir=os.path.join(path,i), output_dir=os.path.join(extracted,i), batch_size=512)
