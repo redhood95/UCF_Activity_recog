@@ -141,5 +141,10 @@ def extract_features(input_dir, output_dir, model_type='inceptionv3', batch_size
             np.save(f, features)
 
 
+path = "../data/UCF50/UCF50"
+extracted = '../data/UCF50/extracted'
+list1 =  os.listdir(path)
 
-extract_features(input_dir='../data/UCF50/UCF50/BaseballPitch/', output_dir='../data/UCF50/extracted', batch_size=32)
+for i in list1:
+    os.mkdir(os.path.join(extracted,i))
+    extract_features(input_dir=os.path.join(path,i), output_dir=os.path.join(extracted,i), batch_size=32)
