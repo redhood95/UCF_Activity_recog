@@ -23,7 +23,7 @@ class Load:
             print ("File not exist")
             activity = UCF50()
 
-            train_x , train_y,eval_x , eval_y, test_x  , test_y = activity.load_data("data\HockeyFights\extracted_frames")
+            train_x , train_y,eval_x , eval_y, test_x  , test_y = activity.load_data('data/UCF50/full_extractedresize_bw')
 
             np.save("arrays_dump/train_x.npy",train_x)
             np.save("arrays_dump/train_y.npy",train_y)
